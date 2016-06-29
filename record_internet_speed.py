@@ -8,11 +8,11 @@ def test():
     start = results.index('Download') + len('Download')+2
     end = results.index('Testing upload speed') - 2
     speed = results[start:end]
-    return ( str(now) , speed)
+    return (str(now), speed)
 
 
 while 1>0:
-    print 'testing'
+    print('testing')
     speed_records = open('speed_records.txt','a')
     try:
     	results = test()
@@ -20,6 +20,6 @@ while 1>0:
     	speed_records.write( ','.join(results) + '\n' )
     	speed_records.close()
     except:
-	print "errror, just keep going"
-    print 'sleeping'
+	print "error, just keep going"
+    print('sleeping')
     time.sleep(60*10)
